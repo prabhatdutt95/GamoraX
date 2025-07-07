@@ -1,0 +1,21 @@
+.hero-banner {
+  text-align: center;
+  padding: 4rem 1rem;
+  background: linear-gradient(to right, #1a1a1a, #121212);
+  color: #fff;
+
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .primary-cta {
+    padding: 0.75rem 2rem;
+    background: #00ffc3;
+    color: #000;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+}
