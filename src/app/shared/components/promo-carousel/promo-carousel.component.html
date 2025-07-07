@@ -1,0 +1,40 @@
+<section class="py-12 px-6 md:px-20">
+  <h2 class="text-3xl font-bold text-primary text-center mb-8">
+    Featured Promotions
+  </h2>
+
+  <div class="carousel w-full rounded-lg shadow-lg overflow-hidden">
+    <div
+      *ngFor="let promo of promos"
+      [id]="promo.id"
+      class="carousel-item relative w-full"
+    >
+      <img
+        [ngSrc]="promo.image"
+        width="800"
+        height="300"
+        class="w-full object-cover h-[300px]"
+        alt="Promo"
+        priority
+      />
+
+      <div
+        class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent text-white p-6"
+      >
+        <h3 class="text-xl font-semibold">{{ promo.title }}</h3>
+        <p class="text-sm opacity-80">{{ promo.subtitle }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex justify-center gap-4 mt-4">
+    <a
+      *ngFor="let promo of promos"
+      [attr.href]="'#' + promo.id"
+      class="btn btn-xs"
+      (click)="$event.preventDefault(); scrollToSlide(promo.id)"
+    >
+      {{ promo.id }}
+    </a>
+  </div>
+</section>
